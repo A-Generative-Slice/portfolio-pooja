@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H. Pooja | Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-primary: #111111;
+            --text-secondary: #444444;
+            --accent-color: #1A1953;
+            --accent-light: #2F2FE4;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: #f0f0f0;
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .resume-page {
+            background-color: var(--bg-color);
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header-left h1 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin: 0 0 5px 0;
+            color: var(--accent-color);
+        }
+
+        .header-left h2 {
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: var(--accent-light);
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .item .date {
+            color: var(--accent-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .item p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+            font-size: 0.95rem;
+        }
+
+        .skills-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-light);
+            font-weight: bold;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--accent-light);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(47, 47, 228, 0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-3px);
+            background-color: var(--accent-color);
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .resume-page {
+                box-shadow: none;
+                width: 100%;
+                min-height: 100%;
+                padding: 0;
+            }
+            .print-btn {
+                display: none;
+            }
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Print Resume</button>
+
+    <div class="resume-page">
+        <header>
+            <div class="header-left">
+                <h1>H. Pooja</h1>
+                <h2>Fashion & Costume Designer</h2>
+            </div>
+            <div class="header-right">
+                h.pooja2002pj@gmail.com<br>
+                +91 9087470744<br>
+                35E, 5th Street, Annai Anjugam<br>
+                Ammiyar Nagar, Perungudi,<br>
+                Chennai - 600096
+            </div>
+        </header>
+
+        <div class="objective">
+            <h2 class="section-title">Career Objective</h2>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; font-style: italic;">
+                "Looking for a position that could build on my skills and provide me an ample scope for growth and contribute to the organization's goals by effectively using my conceptual skills and knowledge. I am seeking a Professorial role to share my comprehensive industry experience with aspiring students."
+            </p>
+        </div>
+
+        <div class="grid-container">
+            <div class="left-col">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="item">
+                    <h3>Teaching Assistant / Lab Assistant</h3>
+                    <span class="date">NIFT Chennai • 6 Months</span>
+                    <p>Assisted in the Fashion Design Department. Mentored students in practical sewing technologies, fabric handling, and fashion illustration. Cultivated an engaging academic environment by sharing industry insights.</p>
+                </div>
+
+                <div class="item">
+                    <h3>Boutique Manager & Head Designer</h3>
+                    <span class="date">Boutique Industry • 6+ Years Experience</span>
+                    <p>Directed daily boutique operations and maintained high-end client relations. Applied advanced customer handling techniques. Oversaw custom garment creation, advanced embroidery projects, and bespoke saree draping for clients.</p>
+                </div>
+
+                <div class="item">
+                    <h3>Movie Costume Designer</h3>
+                    <span class="date">Movie Industry</span>
+                    <p>Conceptualized and designed costumes for cinematic productions, focusing on character enhancement through authentic fabric selection, detailed pattern making, and intricate craftsmanship.</p>
+                </div>
+
+                <h2 class="section-title">Education</h2>
+                <div class="item">
+                    <h3>Degree (Madras University)</h3>
+                    <span class="date">JBAS College, Chennai • 2026</span>
+                </div>
+                <div class="item">
+                    <h3>Degree (Rajiv Gandhi National Institute of Youth Development)</h3>
+                    <span class="date">Apparel Training & Design Centre • 2023</span>
+                </div>
+                <div class="item">
+                    <h3>HSC & SSLC</h3>
+                    <span class="date">Government Higher Sec. School • 2020 & 2018</span>
+                </div>
+            </div>
+
+            <div class="right-col">
+                <h2 class="section-title">Core Skills</h2>
+                <ul class="skills-list">
+                    <li>Fabric Knowledge</li>
+                    <li>Customer Handling Technique</li>
+                    <li>Sewing Technology Skill</li>
+                    <li>Printing & Painting Skills</li>
+                    <li>Advanced Machine Embroidery</li>
+                    <li>Hand Embroidery</li>
+                    <li>Boutique Management</li>
+                    <li>Fashion Illustration</li>
+                    <li>Saree Draping</li>
+                    <li>Pattern Making</li>
+                    <li>Fast Learner</li>
+                    <li>Good Communicator</li>
+                </ul>
+
+                <h2 class="section-title">Languages</h2>
+                <ul class="skills-list">
+                    <li>Tamil</li>
+                    <li>English</li>
+                    <li>Hindi</li>
+                </ul>
+
+                <h2 class="section-title">Interests</h2>
+                <ul class="skills-list">
+                    <li>Teaching & Mentoring</li>
+                    <li>Drawing & Illustration</li>
+                    <li>Sewing Innovations</li>
+                    <li>Music</li>
+                    <li>Chess</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
