@@ -40,6 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for anchor links and close mobile menu on click
     navItems.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            
+            // If it's a normal link (like resume.html), don't prevent default
+            if (!targetId.startsWith('#')) {
+                return; 
+            }
+            
             e.preventDefault();
             
             // Close menu if open
@@ -49,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = '';
             }
             
-            const targetId = this.getAttribute('href');
             if (targetId === '#') return;
             
             const targetElement = document.querySelector(targetId);
