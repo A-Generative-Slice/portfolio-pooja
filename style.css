@@ -391,6 +391,8 @@ h2 {
 
 .skill-img {
     width: 100%;
+    max-width: 100%;
+    display: block;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
@@ -473,10 +475,15 @@ h2 {
     padding: 40px;
     border-radius: 12px;
     border-left: 4px solid var(--accent-color);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .exp-img {
     width: 100%;
+    max-width: 100%;
+    display: block;
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
