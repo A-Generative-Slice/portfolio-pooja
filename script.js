@@ -66,4 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Portfolio category dropdown toggle
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+    portfolioCards.forEach(card => {
+        const cardFront = card.querySelector('.card-front');
+        
+        cardFront.addEventListener('click', (e) => {
+            const isActive = card.classList.contains('active');
+
+            // Close other active cards for accordion effect
+            portfolioCards.forEach(c => {
+                if (c !== card) {
+                    c.classList.remove('active');
+                }
+            });
+
+            // Toggle current card
+            if (!isActive) {
+                card.classList.add('active');
+            } else {
+                card.classList.remove('active');
+            }
+        });
+    });
 });
