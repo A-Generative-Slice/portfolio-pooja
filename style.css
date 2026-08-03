@@ -579,23 +579,34 @@ h2 {
 
 .dropdown-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    align-items: stretch;
 }
 
 .gallery-item {
     background-color: var(--surface-color);
     border-radius: 12px;
     padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
 }
 
 .gallery-item img {
     width: 100%;
-    height: 240px;
+    height: 280px;
     object-fit: cover;
+    object-position: center top;
     border-radius: 8px;
     margin-bottom: 12px;
     transition: transform 0.3s ease;
@@ -608,14 +619,106 @@ h2 {
 .gallery-item h5 {
     font-size: 1.05rem;
     color: var(--text-primary);
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-family: var(--font-body);
 }
 
 .gallery-item p {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--text-secondary);
-    line-height: 1.4;
+    line-height: 1.45;
+    margin-top: auto;
+}
+
+/* Image Lightbox Modal */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 2500;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(10, 10, 14, 0.95);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-modal.active {
+    display: flex;
+    animation: fadeInModal 0.25s ease-out forwards;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    color: var(--text-primary);
+    font-size: 38px;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 2600;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.modal-close:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+.modal-content-wrapper {
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background: #16161a;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-wrapper img {
+    width: 100%;
+    max-height: 68vh;
+    object-fit: contain;
+    background: #09090b;
+}
+
+.modal-text-box {
+    padding: 20px 24px;
+    background: #16161a;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.modal-text-box h4 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    font-family: var(--font-body);
+}
+
+.modal-text-box p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
 }
 
 .dropdown-gallery.single-info {
