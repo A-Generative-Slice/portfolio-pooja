@@ -120,6 +120,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Also allow card-front preview images to open in lightbox modal
+    const cardMedias = document.querySelectorAll('.card-media');
+    cardMedias.forEach(media => {
+        media.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent accordion toggling
+            const img = media.querySelector('img');
+            const cardInfo = media.parentElement.querySelector('.card-info');
+            const title = cardInfo ? cardInfo.querySelector('h3') : null;
+            const desc = cardInfo ? cardInfo.querySelector('p') : null;
+
+            if (img && modal) {
+                modalImg.src = img.src;
+                modalImg.alt = img.alt || '';
+                modalTitle.textContent = title ? title.textContent : '';
+                modalDesc.textContent = desc ? desc.textContent : '';
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
     const closeModal = () => {
         if (modal) {
             modal.classList.remove('active');
@@ -129,6 +151,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (modalClose) {
         modalClose.addEventListener('click', closeModal);
+        modalClose.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            closeModal();
+        });
     }
 
     if (modal) {
