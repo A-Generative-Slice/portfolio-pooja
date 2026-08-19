@@ -555,7 +555,7 @@ h2 {
 }
 
 .portfolio-card.active .card-dropdown {
-    max-height: 2500px;
+    max-height: 5000px;
     padding: 35px 25px;
 }
 
