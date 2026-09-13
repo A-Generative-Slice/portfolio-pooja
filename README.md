@@ -1,74 +1,24 @@
-# H. Pooja — Fashion & Costume Design Portfolio 👗✨
+# H. Pooja — Cinema Costume & Bridal Fashion Design Portfolio 👗✨
 
 <div align="center">
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Creative Portfolio](https://img.shields.io/badge/Portfolio-Costume_Design-pink?style=for-the-badge)](#)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://w3schools.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://javascript.info/)
 
-**High-Impact Creative Portfolio & Digital Resume for Fashion & Cinema Costume Designer H. Pooja — Chennai.**
+**Official digital portfolio and interactive showcase for film wardrobe, bridal boutique collections, and fashion design lectures by costume designer H. Pooja.**
 
 </div>
 
 ---
 
-## 📖 Overview
-
-This repository hosts the official creative portfolio and digital atelier for **H. Pooja**, a premier Fashion & Costume Designer based in Chennai, India. 
-
-Bridging cinematic character design, luxury bridal couture, and academic fashion lectures, this platform showcases her professional journey across the South Indian film industry, commercial boutiques, and design pedagogy.
-
----
-
-## 🌟 Key Highlights & Portfolio Sections
-
-- 🎬 **Cinema & Feature Film Costume Styling**: In-depth visual showcases of period-accurate and contemporary costume design for theatrical releases, cast mood boards, and on-set wardrobe management (`exp-movie.jpg`).
-- 🪡 **Boutique & Bespoke Bridal Couture**: Handcrafted bridal ensembles, intricate zardozi embroidery, pattern drafting, and client commissions (`exp-boutique.jpg`).
-- 🎓 **Academic Mentorship & Workshops**: Documentation of fashion design lectures, textile science courses, and university student workshops (`exp-teaching.jpg`).
-- 🖼️ **Interactive Lookbook & Lightbox Gallery**: Over 20 high-resolution editorial fashion shoots with full-screen zoom, keyboard carousel navigation, and mobile touch swipe.
-- 📄 **Digital Resume & Curriculum Vitae**: Dedicated interactive resume view (`resume.html`) alongside downloadable authenticated PDF documentation (`Pooja Resume 05.06.26 (1).pdf`).
+## 🌟 Featured Collections
+- **Tamil Cinema Wardrobes**: Character costume designs and lead cast wardrobes for regional films.
+- **Boutique Bridal Couture**: Handcrafted bridal blouses, intricate embroidery, and traditional silks.
+- **Interactive Lightbox Modal**: High-definition framing and responsive mobile galleries.
 
 ---
 
-## 📂 Repository Structure
-
-```
-PoojaFDS/
-├── index.html                  # Main portfolio showcase & hero gallery
-├── resume.html                 # Interactive digital curriculum vitae
-├── style.css                   # Responsive layout, grid typography, and modal styling
-├── script.js                   # Lightbox controllers, image carousel, and filtering
-├── Pooja Resume 05.06.26 (1).pdf # Downloadable formal resume
-├── exp-movie.jpg               # Feature film experience spotlight
-├── exp-boutique.jpg            # Boutique creation spotlight
-├── exp-teaching.jpg            # Academic lecturing spotlight
-├── img_1.jpeg ... img_22.jpeg  # High-resolution lookbook gallery assets
-└── README.md                   # Project documentation
-```
-
----
-
-## 🚀 Running Locally
-
-The portfolio is engineered with zero runtime dependencies (native HTML5, modern CSS3 Flexbox/Grid, and modular ES6 JavaScript):
-
-```bash
-# 1. Clone repository
-git clone https://github.com/A-Generative-Slice/PoojaFDS.git
-cd PoojaFDS
-
-# 2. Serve with any lightweight HTTP server
-npx serve .
-# or
-python -m http.server 3000
-```
-
-Open `http://localhost:3000` in any web browser.
-
----
-
-## 📄 License & Attribution
-
-Designed and engineered by **A Generative Slice** for **H. Pooja**.  
-Copyright © 2026 H. Pooja & A Generative Slice. All rights reserved.
+<div align="center">
+  <sub>Designed & Developed for <strong>H. Pooja</strong> by <strong>A Generative Slice</strong> &bull; <a href="https://github.com/smdhussain06">Mohammed Hussain</a></sub>
+</div>
